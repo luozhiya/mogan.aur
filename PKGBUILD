@@ -11,11 +11,10 @@ pkgdesc="A structured wysiwyg scientific text editor"
 arch=("x86_64")
 url="https://github.com/XmacsLabs/mogan"
 license=("GPL3")
-# The QT environment is automatically detected by xmake by default, but if the QT SDK environment is not found, users can manually specify the QT SDK Environment directory,  ```xmake f --qt=~/Qt/Qt5.9.1```
-#  Because we cannot know the exact QT path, we have added support for QT5 and QT6 to be compatible with the user's environment.
-#  1. If the user installs both QT5 and QT6, xmake will automatically select QT5.
-#  2. If the user only installs QT6 or QT5, xmake will select the unique one.
-depends=("qt5-base" "qt5-svg" "qt6-base" "qt6-svg" "sqlite" "zlib" "unzip" "curl" "texlive-core" "python" "libxext" "libgit2")
+depends=(
+  "qt6-base" "qt6-svg" "noto-fonts-cjk" "libpng" "libjpeg" "sqlite"
+  "zlib" "unzip" "curl" "texlive-core" "python" "libxext" "libgit2"
+  "mimalloc" "fontconfig" "freetype2" "openssl")
 makedepends=("git" "xmake")
 optdepends=(
   "gawk: Conversion of some files"

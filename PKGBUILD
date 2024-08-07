@@ -4,7 +4,7 @@
 # Contributor: Sinofine Lotus <i@sinofine.me>
 
 pkgname=mogan
-pkgver=1.2.7
+pkgver=1.2.8
 _tagver=v${pkgver//_/-}
 pkgrel=1
 pkgdesc="A structured wysiwyg scientific text editor"
@@ -36,7 +36,8 @@ prepare() {
 build() {
   cd "${pkgname}"
   xmake repo --update --yes
-  xmake config -vD --policies=build.ccache -m releasedbg --yes
+  QT6_VERSION=$(qmake6 -query QT_VERSION)
+  xmake config -vD --policies=build.ccache -m releasedbg --yes --qt_sdkver=${QT6_VERSION}
   xmake build --yes -vD research
 }
 

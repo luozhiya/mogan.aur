@@ -4,7 +4,7 @@
 # Contributor: Sinofine Lotus <i@sinofine.me>
 
 pkgname=mogan
-pkgver=1.2.9
+pkgver=1.2.9.5
 _tagver=v${pkgver//_/-}
 pkgrel=1
 pkgdesc="A structured wysiwyg scientific text editor"
@@ -15,7 +15,7 @@ depends=(
   "qt6-base" "qt6-svg" "noto-fonts-cjk" "libpng" "libjpeg" "sqlite"
   "zlib" "unzip" "curl" "texlive-core" "python" "libxext" "libgit2"
   "mimalloc" "fontconfig" "freetype2" "openssl")
-makedepends=("git" "xmake")
+makedepends=("git" "xmake" "base-devel")
 optdepends=(
   "gawk: Conversion of some files"
   "ghostscript: Rendering ps files"

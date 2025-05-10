@@ -13,7 +13,7 @@ url="https://github.com/XmacsLabs/mogan"
 license=("GPL3")
 depends=(
   "qt6-base" "qt6-svg" "noto-fonts-cjk" "libpng" "libjpeg" "sqlite"
-  "zlib" "unzip" "curl" "texlive-core" "python" "libxext" "libgit2"
+  "zlib" "unzip" "curl" "texlive-basic" "python" "libxext" "libgit2"
   "mimalloc" "fontconfig" "freetype2" "openssl")
 makedepends=("git" "xmake" "base-devel")
 optdepends=(

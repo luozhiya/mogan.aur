@@ -4,7 +4,7 @@
 # Contributor: Sinofine Lotus <i@sinofine.me>
 
 pkgname=mogan
-pkgver=1.2.9.8
+pkgver=2025.1.4
 _tagver=v${pkgver//_/-}
 pkgrel=1
 pkgdesc="A structured wysiwyg scientific text editor"
@@ -45,7 +45,7 @@ package() {
   cd "${pkgname}"
 
   # Running makepkg in fakeroot environment
-  xmake install --root -o "${pkgdir}"/usr research
+  xmake install --root -o "${pkgdir}"/usr stem 
 
   # Fix "Can"t translate pathname "usr/share/Xmacs/tests/64_1_中文文件名.tm" to UTF-8"
   rm -rf "${pkgdir}"/usr/share/Xmacs/tests
